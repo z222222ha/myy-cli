@@ -49,6 +49,7 @@ jobs:
       - name: Building
         run: |
           pnpm build
+          npm adduser --registry http://localhost:4873/
           npm publish --registry http://localhost:4873/
           zip -r assets ./background/react-bg/dist/**
 
