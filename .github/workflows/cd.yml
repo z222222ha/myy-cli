@@ -51,6 +51,10 @@ jobs:
           pnpm build
 
       # 发布到verdaccio
-      - name: Publish to Verdaccio
-        run: |
-          npm publish --registry http://120.26.228.216:30480/
+      - name: Publish with Verdaccio
+        uses: verdaccio/github-actions/publish@master
+        with:
+          username: ${{ secrets.VERDACCIO_USERNAME }}
+          password: ${{ secrets.VERDACCIO_PASSWORD }}
+          email: ${{ secrets.VERDACCIO_EMAIL }}
+          url: ${{ variables.VERDACCIO_ADDRESS }}
