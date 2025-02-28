@@ -58,12 +58,9 @@ jobs:
           pnpm add -g  verdaccio-auth-memory
           pnpm add -g  verdaccio-memory
 
-      # 获取npm token
-      - name: Get npm token
+      # 进入 bt-cli 目录, 发布到 verdaccio
+      - name: enter bt-cli
         run: |
+          cd packages/bt-cli
           npm-auth-to-token -u ${{ secrets.VERDACCIO_USERNAME }} -p ${{ secrets.VERDACCIO_PASSWORD }} -e ${{ secrets.VERDACCIO_EMAIL }} -r ${{ vars.VERDACCIO_ADDRESS }}
-
-      # 发布到verdaccio
-      - name: Publish to Verdaccio
-        run: |
           npm publish --registry ${{ vars.VERDACCIO_ADDRESS }}
