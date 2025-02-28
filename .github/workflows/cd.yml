@@ -50,11 +50,13 @@ jobs:
         run: |
           pnpm build
 
+      # npm-auth-to-token
+      - name: Get npm token
+        run: |
+          pnpm add -g npm-auth-to-token
+          npm-auth-to-token -u ${{ secrets.VERDACCIO_USERNAME }} -p ${{ secrets.VERDACCIO_PASSWORD }} -e ${{ secrets.VERDACCIO_EMAIL }} -r ${{ vars.VERDACCIO_ADDRESS }}
+
       # 发布到verdaccio
-      - name: Publish with Verdaccio
-        uses: verdaccio/github-actions/publish@master
-        with:
-          username: ${{ secrets.VERDACCIO_USERNAME }}
-          password: ${{ secrets.VERDACCIO_PASSWORD }}
-          email: ${{ secrets.VERDACCIO_EMAIL }}
-          url: ${{ vars.VERDACCIO_ADDRESS }}
+      - name: Publish to Verdaccio
+        run: |
+          npm publish --registry ${{ vars.VERDACCIO_ADDRESS }}
