@@ -58,7 +58,7 @@ jobs:
       # 获取npm token
       - name: Get npm token
         run: |
-          npm-auth-to-token -u ${{ secrets.VERDACCIO_USERNAME }} -p ${{ secrets.VERDACCIO_PASSWORD }} -e ${{ secrets.VERDACCIO_EMAIL }} -r ${{ vars.VERDACCIO_ADDRESS }}
+          npm-auth-to-token -u ${{ vars.VERDACCIO_USERNAME }} -p ${{ vars.VERDACCIO_PASSWORD }} -e ${{ vars.VERDACCIO_EMAIL }} -r ${{ vars.VERDACCIO_ADDRESS }}
 
       # 发布到verdaccio
       - name: Publish to Verdaccio
