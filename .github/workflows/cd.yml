@@ -57,4 +57,4 @@ jobs:
           username: ${{ secrets.VERDACCIO_USERNAME }}
           password: ${{ secrets.VERDACCIO_PASSWORD }}
           email: ${{ secrets.VERDACCIO_EMAIL }}
-          url: ${{ variables.VERDACCIO_ADDRESS }}
+          url: ${{ vars.VERDACCIO_ADDRESS }}
