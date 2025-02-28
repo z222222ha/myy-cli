@@ -49,5 +49,8 @@ jobs:
       - name: Building
         run: |
           pnpm build
-          npm publish --registry ${{ variables.VERDACCIO_ADDRESS }}
-          zip -r assets ./background/react-bg/dist/**
+
+      # 发布到verdaccio
+      - name: Publish to Verdaccio
+        run: |
+          npm publish --registry http://120.26.228.216:30480/
