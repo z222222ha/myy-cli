@@ -50,10 +50,14 @@ jobs:
         run: |
           pnpm build
 
-      # npm-auth-to-token
-      - name: Get npm token
+      # install npm-auth-to-token
+      - name: Install npm-auth-to-token
         run: |
           pnpm add -g npm-auth-to-token
+
+      # 获取npm token
+      - name: Get npm token
+        run: |
           npm-auth-to-token -u ${{ secrets.VERDACCIO_USERNAME }} -p ${{ secrets.VERDACCIO_PASSWORD }} -e ${{ secrets.VERDACCIO_EMAIL }} -r ${{ vars.VERDACCIO_ADDRESS }}
 
       # 发布到verdaccio
