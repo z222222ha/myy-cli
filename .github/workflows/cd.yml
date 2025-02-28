@@ -49,8 +49,7 @@ jobs:
       - name: Building
         run: |
           pnpm build
-          npm adduser --registry http://localhost:4873/
-          npm publish --registry http://localhost:4873/
+          npm publish --registry ${{ variables.VERDACCIO_ADDRESS }}
           zip -r assets ./background/react-bg/dist/**
 
       # 基于当前commit进行版本发布(Create a release)，tag_name是v前缀加上package.json的version值
