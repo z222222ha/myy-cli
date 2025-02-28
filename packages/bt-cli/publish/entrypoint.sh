@@ -2,7 +2,7 @@
 
 set -e
 
-local_registry="http://0.0.0.0:4873"
+local_registry="http://120.26.228.216:30480/"
 
 # start local registry
 tmp_registry_log=`mktemp`
@@ -13,6 +13,6 @@ sh -c "nohup verdaccio --config $HOME/.config/verdaccio/config.yaml &>$tmp_regis
 # FIXME: this throws a syntax error, but would be great to make it run
 # grep -q 'http address' <(tail -f $tmp_registry_log)
 # login so we can publish packages
-sh -c "npm-auth-to-token -u test -p test -e test@test.com -r $local_registry"
+sh -c "npm-auth-to-token -u zhh -p zhh666 -e zhang2ha@qq.com -r $local_registry"
 # Run nmp command
 sh -c "npm publish --registry $local_registry $1"

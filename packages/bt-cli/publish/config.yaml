@@ -2,8 +2,8 @@ auth:
   auth-memory:
     users:
       foo:
-        name: test
-        password: test
+        name: zhh
+        password: zhh666
 store:
   memory:
     limit: 1000
@@ -20,4 +20,4 @@ middlewares:
   audit:
     enabled: true
 logs:
- - {type: stdout, format: pretty, level: trace}
+  - { type: stdout, format: pretty, level: trace }
