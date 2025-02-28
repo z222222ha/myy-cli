@@ -52,4 +52,4 @@ jobs:
 
       # 发布到 verdaccio
       - name: Publish with Verdaccio
-        uses: z222222ha/myy-cli/packages/bt-cli/publish@master
+        uses: verdaccio/github-actions/publish@master
