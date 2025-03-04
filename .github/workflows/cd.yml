@@ -5,7 +5,7 @@ on:
     branches: master
 jobs:
   CD:
-    runs-on: self-hosted
+    runs-on: [self-hosted, Linux, X64, myy-cli-runner]
     steps:
       # 拉取代码
       - name: Checkout repository
