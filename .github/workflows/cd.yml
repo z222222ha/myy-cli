@@ -5,7 +5,7 @@ on:
     branches: master
 jobs:
   CD:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       # 拉取代码
       - name: Checkout repository
@@ -52,4 +52,4 @@ jobs:
 
       # 发布到 verdaccio
       - name: Publish with Verdaccio
-        uses: z222222ha/myy-cli/packages/bt-cli/publish@master
+        uses: verdaccio/github-actions/publish@master
