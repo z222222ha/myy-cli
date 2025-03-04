@@ -51,5 +51,5 @@ jobs:
           pnpm build
 
       # 发布到 verdaccio
-      - name: Publish with Verdaccio
-        uses: verdaccio/github-actions/publish@master
+      # - name: Publish with Verdaccio
+      #   uses: verdaccio/github-actions/publish@master
