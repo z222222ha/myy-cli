@@ -15,6 +15,7 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v4
         with:
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           node-version: '20.x'
           cache: 'npm'
 
