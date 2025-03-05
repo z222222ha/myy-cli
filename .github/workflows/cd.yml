@@ -10,11 +10,13 @@ jobs:
       # 拉取代码
       - name: Checkout repository
         uses: actions/checkout@v2
+
       # 下载Node
       - name: Use Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '18.x'
+
       # 添加缓存，逻辑和CI Workflow里的一样
       - name: Cache
         id: cache-dependencies
@@ -23,6 +25,7 @@ jobs:
           path: |
             **/node_modules
           key: ${{runner.OS}}-${{hashFiles('**/pnpm-lock.yaml')}}
+
       # 安装pnpm
       - name: Install pnpm
         uses: pnpm/action-setup@v2
