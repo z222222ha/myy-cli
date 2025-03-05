@@ -46,9 +46,9 @@ jobs:
           property: version
 
       # 打包生成制品，且把制品压缩到assets.zip压缩包里
-      - name: Building
-        run: |
-          pnpm build
+      # - name: Building
+      #   run: |
+      #     pnpm build
 
       # 发布到 verdaccio
       # - name: Publish with Verdaccio
