@@ -65,5 +65,4 @@ jobs:
       - name: Publish to Verdaccio
         run: |
           cd packages/bt-cli
-          npm-auth-to-token -u ${{ secrets.VERDACCIO_USERNAME }} -p ${{ secrets.VERDACCIO_PASSWORD }} -e ${{ secrets.VERDACCIO_EMAIL }} -r http://120.26.228.216:30480/
           npm publish
