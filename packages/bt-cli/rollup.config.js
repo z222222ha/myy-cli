@@ -1,16 +1,16 @@
-const commonjs = require('@rollup/plugin-commonjs')
-const json = require('@rollup/plugin-json')
-const nodeResolve = require('@rollup/plugin-node-resolve')
-const copy = require('rollup-plugin-copy')
+const commonjs = require("@rollup/plugin-commonjs")
+const json = require("@rollup/plugin-json")
+const nodeResolve = require("@rollup/plugin-node-resolve")
+const copy = require("rollup-plugin-copy")
 
-const fs = require('fs')
-const path = require('path')
+const fs = require("fs")
+const path = require("path")
 
 module.exports = {
-  input: 'bin/index.js',
+  input: "bin/index.js",
   output: {
-    file: 'dist/bundle.js',
-    format: 'cjs',
+    file: "dist/bundle.js",
+    format: "cjs"
   },
   plugins: [
     commonjs(),
@@ -22,10 +22,10 @@ module.exports = {
       //     { src: '../bt-map/src', dest: 'dist/bt-map' },
       //     { src: '../bt-map/index.html', dest: 'dist/bt-map' },
       //   ],
-      targets: [{ src: '../bt-core', dest: 'dist' }, ...generateTargets('../bt-map')],
-      verbose: true, // 在终端进行console.log
-    }),
-  ],
+      targets: [{ src: "../bt-core", dest: "dist" }, ...generateTargets("../bt-map")],
+      verbose: true // 在终端进行console.log
+    })
+  ]
 }
 
 function readDirectory(directoryPath) {
@@ -37,7 +37,7 @@ function readDirectory(directoryPath) {
     const stats = fs.statSync(filePath)
 
     // 排除 node_modules
-    if (file === 'node_modules') {
+    if (file === "node_modules") {
       return
     }
 
@@ -45,15 +45,15 @@ function readDirectory(directoryPath) {
       console.log(filePath)
       result.push({
         name: file,
-        type: 'directory',
-        path: filePath,
+        type: "directory",
+        path: filePath
       })
     } else {
       console.log(filePath)
       result.push({
         name: file,
-        type: 'file',
-        path: filePath,
+        type: "file",
+        path: filePath
       })
     }
   })
@@ -63,6 +63,6 @@ function readDirectory(directoryPath) {
 
 function generateTargets(directoryPath) {
   return readDirectory(directoryPath).map((file) => {
-    return { src: '../bt-map/' + file.name, dest: 'dist/bt-map' }
+    return { src: "../bt-map/" + file.name, dest: "dist/bt-map" }
   })
 }
