@@ -65,5 +65,5 @@ jobs:
       - name: Publish to Verdaccio
         run: |
           cd packages/bt-cli
-          npm login --registry http://120.26.228.216:30480/
+          node ./login.js
           npm publish

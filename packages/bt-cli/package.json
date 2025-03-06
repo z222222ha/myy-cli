@@ -21,7 +21,8 @@
     "commander": "^13.1.0",
     "fs-extra": "^11.3.0",
     "inquirer": "8.2.5",
-    "ora": "^5.4.1"
+    "ora": "^5.4.1",
+    "shelljs": "^0.8.5"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^28.0.2",

@@ -35,6 +35,9 @@ importers:
       ora:
         specifier: ^5.4.1
         version: 5.4.1
+      shelljs:
+        specifier: ^0.8.5
+        version: 0.8.5
     devDependencies:
       '@rollup/plugin-commonjs':
         specifier: ^28.0.2
@@ -1564,6 +1567,10 @@ packages:
     resolution: {integrity: sha512-QAgPDQMEgrDssk1XiwwHoOGYF9BAbUcc1+j+FhEvaOt8/cKRqyLn0U5qA6F74fGhTMGxf92pOvPBeh29jQJDTQ==}
     engines: {node: '>=12.0.0'}
 
+  interpret@1.4.0:
+    resolution: {integrity: sha512-agE4QfB2Lkp9uICn7BAqoscw4SZP9kTE2hxiFI3jBPmXJfdqiahTbUuKGsMoN2GtqL9AxhYioAcVvgsb1HvRbA==}
+    engines: {node: '>= 0.10'}
+
   ipaddr.js@1.9.1:
     resolution: {integrity: sha512-0KI/607xoxSToH7GjN1FfSbLoU0+btTicjsQSWQlh/hZykN8KpmMf7uYwPW3R+akZ6R/w18ZlXSHBYXiYUPO3g==}
     engines: {node: '>= 0.10'}
@@ -1913,6 +1920,10 @@ packages:
     resolution: {integrity: sha512-GDhwkLfywWL2s6vEjyhri+eXmfH6j1L7JE27WhqLeYzoh/A3DBaYGEj2H/HFZCn/kMfim73FXxEJTw06WtxQwg==}
     engines: {node: '>= 14.18.0'}
 
+  rechoir@0.6.2:
+    resolution: {integrity: sha512-HFM8rkZ+i3zrV+4LQjwQ0W+ez98pApMGM3HUrN04j3CqzPOzl9nmP15Y8YXNm8QHGv/eacOVEjqhmWpkRV0NAw==}
+    engines: {node: '>= 0.10'}
+
   regenerator-runtime@0.11.1:
     resolution: {integrity: sha512-MguG95oij0fC3QV3URf4V2SDYGJhJnJGqvIIgdECeODCT98wSWDAJ94SSuVpYQUoTcGUIL6L4yNB7j1DFFHSBg==}
 
@@ -2002,6 +2013,11 @@ packages:
 
   setprototypeof@1.2.0:
     resolution: {integrity: sha512-E5LDX7Wrp85Kil5bhZv46j8jOeboKq5JMmYM3gVGdGH8xFpPWXUMsNrlODCrkoxMEeNi/XZIwuRvY4XNwYMJpw==}
+
+  shelljs@0.8.5:
+    resolution: {integrity: sha512-TiwcRcrkhHvbrZbnRcFYMLl30Dfov3HKqzp5tO5b4pt6G/SezKcYhmDg15zXVBswHmctSAQKznqNW2LO5tTDow==}
+    engines: {node: '>=4'}
+    hasBin: true
 
   side-channel-list@1.0.0:
     resolution: {integrity: sha512-FCLHtRD/gnpCiCHEiJLOwdmFP+wzCmDEkc9y7NsYxeF4u7Btsn1ZuwgwJGxImImHicJArLP4R0yX4c2KCrMrTA==}
@@ -3420,6 +3436,8 @@ snapshots:
       through: 2.3.8
       wrap-ansi: 7.0.0
 
+  interpret@1.4.0: {}
+
   ipaddr.js@1.9.1: {}
 
   is-core-module@2.16.1:
@@ -3716,6 +3734,10 @@ snapshots:
 
   readdirp@4.1.2: {}
 
+  rechoir@0.6.2:
+    dependencies:
+      resolve: 1.22.10
+
   regenerator-runtime@0.11.1: {}
 
   require-directory@2.1.1: {}
@@ -3838,6 +3860,12 @@ snapshots:
   set-blocking@2.0.0: {}
 
   setprototypeof@1.2.0: {}
+
+  shelljs@0.8.5:
+    dependencies:
+      glob: 7.2.3
+      interpret: 1.4.0
+      rechoir: 0.6.2
 
   side-channel-list@1.0.0:
     dependencies:
