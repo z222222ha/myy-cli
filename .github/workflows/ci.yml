@@ -52,6 +52,3 @@ jobs:
         run: pnpm lint
 
       # 运行自动化测试
-    #   - name: Running Test
-    #     # 通过前面章节定义的命令行执行自动化测试
-    #     run: yarn test
