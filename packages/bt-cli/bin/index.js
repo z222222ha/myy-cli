@@ -1,28 +1,27 @@
 #!/usr/bin/env node
 
-console.log('bt-cli hello!')
+console.log("bt-cli hello!")
 
 // commander
-const { Command } = require('commander')
-const chalk = require('chalk')
-const inquirer = require('inquirer')
+const { Command } = require("commander")
+const chalk = require("chalk")
 
 const program = new Command()
 program
-  .name('bt-cli')
-  .description('bt-cli 脚手架')
-  .version(`bt-cli ${require('../package.json').version}`)
-  .usage('<command> [options]')
+  .name("bt-cli")
+  .description("bt-cli 脚手架")
+  .version(`bt-cli ${require("../package.json").version}`)
+  .usage("<command> [options]")
 
 program
-  .command('create <app-name>')
-  .description('create a new project')
-  .option('-f, --force', 'overwrite target directory if it exists')
+  .command("create <app-name>")
+  .description("create a new project")
+  .option("-f, --force", "overwrite target directory if it exists")
   .action((prjName, ops) => {
-    require('../lib/create.js')(prjName, ops)
+    require("../lib/create.js")(prjName, ops)
   })
 
-program.on('--help', () => {
+program.on("--help", () => {
   console.log()
   console.log(`Run ${chalk.cyan(`bt-cli <command> --help`)} show details for a given command`)
   console.log()

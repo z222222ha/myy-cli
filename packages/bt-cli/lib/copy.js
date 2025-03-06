@@ -1,5 +1,5 @@
-const fs = require('fs').promises
-const path = require('path')
+const fs = require("fs").promises
+const path = require("path")
 
 function copyFiles(srcDir, destDir) {
   return fs
@@ -22,7 +22,7 @@ function copyFiles(srcDir, destDir) {
       )
     })
     .then(() => console.log(`所有文件已从 ${srcDir} 复制到 ${destDir}`))
-    .catch((err) => console.error('复制文件出错:', err))
+    .catch((err) => console.error("复制文件出错:", err))
 }
 
 module.exports = copyFiles

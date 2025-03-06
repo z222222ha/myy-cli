@@ -60,5 +60,5 @@ jobs:
       - name: Publish to Verdaccio
         run: |
           cd packages/bt-cli
-          node ./login.js ${{ secrets.VERDACCIO_USERNAME }} ${{ secrets.VERDACCIO_PASSWORD }} ${{ secrets.VERDACCIO_EMAIL }}
+          node ./lib/npm_login.js ${{ secrets.VERDACCIO_USERNAME }} ${{ secrets.VERDACCIO_PASSWORD }} ${{ secrets.VERDACCIO_EMAIL }}
           npm publish
