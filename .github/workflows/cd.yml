@@ -56,14 +56,9 @@ jobs:
         run: |
           pnpm build
 
-      # install npm-auth-to-token
-      - name: Install npm-auth-to-token
-        run: |
-          pnpm add -g npm-auth-to-token
-
-      # 发布到 verdaccio
+      # 执行 npm 登录脚本，并发布到 verdaccio
       - name: Publish to Verdaccio
         run: |
           cd packages/bt-cli
-          node ./login.js
+          node ./login.js ${{ secrets.VERDACCIO_USERNAME }} ${{ secrets.VERDACCIO_PASSWORD }} ${{ secrets.VERDACCIO_EMAIL }}
           npm publish
