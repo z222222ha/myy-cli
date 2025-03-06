@@ -56,6 +56,8 @@ jobs:
         run: |
           pnpm build
 
-      # 发布到 verdaccio
-      - name: Publish with Verdaccio
-        uses: verdaccio/github-actions/publish@master
+      # 发布到verdaccio
+      - name: Publish to Verdaccio
+        run: |
+          cd packages/bt-cli
+          npm publish
