@@ -5,7 +5,7 @@ on:
     branches: master
 jobs:
   CD:
-    runs-on: [self-hosted, X64, Windows, windows-runner]
+    runs-on: [self-hosted, X64, Linux, myy-cli-runner]
     steps:
       # 拉取代码
       - name: Checkout repository
@@ -13,11 +13,10 @@ jobs:
 
       # 下载Node
       - name: Use Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v2
         with:
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           node-version: 18
-          cache: 'pnpm'
 
       # 添加缓存，逻辑和CI Workflow里的一样
       - name: Cache
