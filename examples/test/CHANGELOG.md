@@ -1,5 +1,12 @@
 # test
 
+## 1.0.2
+
+### Patch Changes
+
+- Updated dependencies
+  - bt-cli@0.0.4
+
 ## 1.0.1
 
 ### Patch Changes
