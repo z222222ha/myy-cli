@@ -1,5 +1,11 @@
 # bt-core
 
+## 1.3.0
+
+### Minor Changes
+
+- 2bf41be: test
+
 ## 1.2.0
 
 ### Minor Changes
