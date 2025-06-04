@@ -1,8 +1,8 @@
 name: CD
 on:
   # 以主干的push事件作为触发条件
-  push:
-    branches: master
+  # push:
+  #   branches: master
 jobs:
   CD:
     runs-on: [self-hosted, X64, Linux, myy-cli-runner]
