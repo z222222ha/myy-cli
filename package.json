@@ -9,7 +9,10 @@
     "build": "pnpm run -C packages/bt-cli build",
     "changeset": "changeset",
     "changeset:version": "changeset version",
+<<<<<<< HEAD
     "release": "changeset publish",
+=======
+>>>>>>> parent of 935929c (fix scripts)
     "lint": "pnpm run -C packages/bt-cli lint:eslint && pnpm run -C packages/bt-cli lint:prettier"
   },
   "config": {
