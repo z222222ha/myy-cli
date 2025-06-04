@@ -1,5 +1,11 @@
 # bt-map
 
+## 1.3.1
+
+### Patch Changes
+
+- 68b45f2: test
+
 ## 1.3.0
 
 ### Minor Changes
