@@ -1,5 +1,11 @@
 # bt-cli
 
+## 0.3.0
+
+### Minor Changes
+
+- 2bf41be: test
+
 ## 0.2.0
 
 ### Minor Changes
