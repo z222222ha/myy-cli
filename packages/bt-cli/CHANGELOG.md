@@ -1,5 +1,11 @@
 # bt-cli
 
+## 0.2.0
+
+### Minor Changes
+
+- 0fa1541: add scope name
+
 ## 0.1.0
 
 ### Minor Changes
